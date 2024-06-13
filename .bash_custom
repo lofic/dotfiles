@@ -1,0 +1,114 @@
+# NPM packages in homedir
+NPM_PACKAGES="$HOME/.npm-packages"
+#export PATH="$PATH:$NPM_PACKAGES/bin"
+unset MANPATH
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+
+export PATH="$PATH:$HOME/Documents/scripts:$HOME/.gem/ruby/3.1.0/bin:/sbin:$HOME/go/bin:$HOME/.local/bin:$NPM_PACKAGES/bin:$HOME/bin:/opt/workspacesclient"
+#/opt/puppetlabs/puppet/bin
+
+export LC_CTYPE=fr_FR.UTF-8
+export LC_ALL=fr_FR.UTF-8
+
+export ANSIBLE_NOCOWS=1
+export CFLAGS='-g -Wall -O3 -std=gnu11'
+export GH_NO_UPDATE_NOTIFIER=1
+
+export GEM_HOME=$HOME/.gem
+export RUBYOPT='-W0'
+
+export BAT_THEME='Monokai Extended Light'
+export BAT_STYLE='plain'
+
+HISTFILESIZE=0
+
+GIT_PROMPT_START='[\u@\h \W]'
+GIT_PROMPT_END='\$ '
+GIT_PROMPT_THEME=Single_line
+source ~/Documents/scripts/bash-git-prompt/gitprompt.sh
+
+# Direnv
+eval "$(direnv hook bash)"
+
+export LESSCHARSET=utf-8
+export LESSOPEN="| /usr/share/source-highlight/source-highlight-esc.sh %s"
+export LESS='-R '
+
+# Cf lpstat -p -d
+export PRINTER=HP-LaserJet-p2055dn
+
+
+alias awc='/opt/workspacesclient/workspacesclient'
+alias apdf='asciidoctor-pdf'
+alias berake='bundle exec rake'
+
+alias cda='cd ~/Documents/formation/redhat/rhce'
+alias cdb='cd ~/Documents/backups'
+alias cdc='cd ~/Documents/clients'
+alias cdco='cd ~/Documents/configs/beaker'
+alias cdd='cd ~/Documents/dev'
+
+alias cde='cd ~/Documents/clients/current'
+alias cdg='cd ~/Documents/clients/current/github'
+
+alias cdf='cd ~/Documents/think/gitlab/formations'
+alias cdl='cd ~/Documents/labs'
+alias cdm='cd ~/Documents/labs/puppet-modules'
+alias cdn='cd ~/Documents/blocnote'
+alias cdp='cd ~/Documents/labs/puppet'
+alias cdr='cd ~/Documents/labs/r10k'
+alias cdt='cd ~/Documents/think'
+alias cdti='cd ~/Documents/dev/lofic/tips'
+
+alias hc='rm -f ~/.bash_history; history -c'
+alias gpf='git push --force-with-lease'
+alias glow='glow -s light -w 90 -p'
+
+alias ll='ls -lFh'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias mkgi='echo -e "*.swp\n.*tags" >> .gitignore'
+alias mkgitignore='echo -e "*.swp\n.*tags" >> .gitignore'
+
+alias mplayer='mplayer -utf8'
+alias slowplayer='mplayer -speed 0.5 -af scaletempo'
+alias superslowplayer='mplayer -speed 0.35 -af scaletempo'
+
+alias myip='python3 -c '\''import netifaces; print(netifaces.ifaddresses("br0")[netifaces.AF_INET][0]["addr"])'\'''
+
+
+read -r -d '' EC << EOT
+[*.{yml,yaml,py}]
+indent_style = space
+indent_size = 4
+
+[*.{sh,lua}]
+indent_style = space
+indent_size = 2
+EOT
+export EC
+alias mkec='echo -e "$EC" >> .editorconfig'
+alias mkeditorconfig='echo -e "$EC" >> .editorconfig'
+
+
+alias pt='export PRINTER=LaserJet-1320-series'
+alias ph='export PRINTER=LaserJet-P2055dn'     # Home printer
+
+alias pl='puppet-lint --with-filename .'
+alias pv='puppet parser validate *.pp'
+
+alias virsh='virsh --connect=qemu:///system'
+
+pe () { erb -x -T - "$@" | ruby -c ; }
+ya () { python3 -c "import yaml;import sys;sys.tracebacklimit=0;yaml.load(open('$1').read())"; }
+
+
+if [ -f "${HOME}/google-cloud-sdk/completion.bash.inc" ]; then
+source "${HOME}/google-cloud-sdk/completion.bash.inc"
+source "${HOME}/google-cloud-sdk/path.bash.inc"
+fi
+
+
+export apikey=CHANGEME
