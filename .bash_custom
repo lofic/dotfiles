@@ -80,7 +80,7 @@ alias myip='python3 -c '\''import netifaces; print(netifaces.ifaddresses("br0")[
 
 
 read -r -d '' EC << EOT
-[*.{yml,yaml,py}]
+[*.{yml,yaml,pp,py}]
 indent_style = space
 indent_size = 4
 
