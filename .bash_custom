@@ -21,6 +21,8 @@ export RUBYOPT='-W0'
 export BAT_THEME='Monokai Extended Light'
 export BAT_STYLE='plain'
 
+export EDITOR=vim  # used by the pass command
+
 HISTFILESIZE=0
 
 GIT_PROMPT_START='[\u@\h \W]'
