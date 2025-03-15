@@ -25,8 +25,10 @@ export EDITOR=vim  # used by the pass command
 
 HISTFILESIZE=0
 
-GIT_PROMPT_START='[\u@\h \W]'
-GIT_PROMPT_END='\$ '
+PROMPT_DIRTRIM=2
+export PROMPT_DIRTRIM
+GIT_PROMPT_START='\w'
+GIT_PROMPT_END=' > '
 GIT_PROMPT_THEME=Single_line
 source ~/Documents/scripts/bash-git-prompt/gitprompt.sh
 
@@ -51,10 +53,13 @@ alias cdc='cd ~/Documents/clients'
 alias cdco='cd ~/Documents/configs/beaker'
 alias cdd='cd ~/Documents/dev'
 
-alias cde='cd ~/Documents/clients/current'
-alias cdg='cd ~/Documents/clients/current/github'
+alias cde='cd ~/Documents/clients/takeda'
+alias cdg='cd ~/Documents/clients/takeda/github'
+alias cdo='cd ~/Documents/clients/takeda/github/openshift/gmsgq-mes-pasx-openshift'
+alias cds='cd ~/Documents/clients/takeda/github/pasx/GMSGQ-MES-PASX-INTEGRATION/snippets/'
 
 alias cdf='cd ~/Documents/think/gitlab/formations'
+alias cdj='cd ~/Documents/jeux/jeuxvideo'
 alias cdl='cd ~/Documents/labs'
 alias cdm='cd ~/Documents/labs/puppet-modules'
 alias cdn='cd ~/Documents/blocnote'
@@ -74,7 +79,7 @@ alias l='ls -CF'
 alias mkgi='echo -e "*.swp\n.*tags" >> .gitignore'
 alias mkgitignore='echo -e "*.swp\n.*tags" >> .gitignore'
 
-alias mplayer='mplayer -utf8'
+#alias mplayer='mplayer -utf8'
 alias slowplayer='mplayer -speed 0.5 -af scaletempo'
 alias superslowplayer='mplayer -speed 0.35 -af scaletempo'
 
@@ -95,7 +100,7 @@ alias mkec='echo -e "$EC" >> .editorconfig'
 alias mkeditorconfig='echo -e "$EC" >> .editorconfig'
 
 
-alias pt='export PRINTER=LaserJet-1320-series'
+alias pt='export PRINTER=LaserJet-1320-series' # Th!nk printer
 alias ph='export PRINTER=LaserJet-P2055dn'     # Home printer
 
 alias pl='puppet-lint --with-filename .'
@@ -111,6 +116,5 @@ if [ -f "${HOME}/google-cloud-sdk/completion.bash.inc" ]; then
 source "${HOME}/google-cloud-sdk/completion.bash.inc"
 source "${HOME}/google-cloud-sdk/path.bash.inc"
 fi
-
 
 export jftoken=CHANGEME
