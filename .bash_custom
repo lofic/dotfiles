@@ -30,7 +30,7 @@ export PROMPT_DIRTRIM
 GIT_PROMPT_START='\w'
 GIT_PROMPT_END=' > '
 GIT_PROMPT_THEME=Single_line
-source ~/Documents/scripts/bash-git-prompt/gitprompt.sh
+source ~/.bash-git-prompt/gitprompt.sh
 
 # Direnv
 eval "$(direnv hook bash)"
