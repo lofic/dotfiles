@@ -5,7 +5,7 @@ unset MANPATH
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
-export PATH="$PATH:$HOME/Documents/scripts:$HOME/.gem/ruby/3.1.0/bin:/sbin:$HOME/go/bin:$HOME/.local/bin:$NPM_PACKAGES/bin:$HOME/bin:/opt/workspacesclient"
+export PATH="$PATH:$HOME/Documents/scripts:$HOME/.gem/ruby/3.1.0/bin:/sbin:$HOME/go/bin:$HOME/.local/bin:$NPM_PACKAGES/bin:$HOME/bin:$HOME/.local/kitty.app/bin/"
 #/opt/puppetlabs/puppet/bin
 
 export LC_CTYPE=fr_FR.UTF-8
@@ -107,6 +107,8 @@ alias pl='puppet-lint --with-filename .'
 alias pv='puppet parser validate *.pp'
 
 alias virsh='virsh --connect=qemu:///system'
+
+alias z='zellij d Louis; zellij -s Louis'
 
 pe () { erb -x -T - "$@" | ruby -c ; }
 ya () { python3 -c "import yaml;import sys;sys.tracebacklimit=0;yaml.load(open('$1').read())"; }
