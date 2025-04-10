@@ -1,0 +1,26 @@
+[global_config]
+  window_state = maximise
+  scroll_tabbar = True
+  handle_size = 0
+  borderless = True
+[keybindings]
+  cycle_next = <Primary><Shift>Tab
+  cycle_prev = ""
+[profiles]
+  [[default]]
+    font = Monospace 12
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 2028
+    use_system_font = False
+    use_theme_colors = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
