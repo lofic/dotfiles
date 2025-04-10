@@ -45,6 +45,7 @@ export PRINTER=HP-LaserJet-p2055dn
 
 alias awc='/opt/workspacesclient/workspacesclient'
 alias apdf='asciidoctor-pdf'
+which batcat &>/dev/null && alias bat=batcat
 alias berake='bundle exec rake'
 
 alias cda='cd ~/Documents/formation/redhat/rhce'
