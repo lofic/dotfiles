@@ -5,7 +5,7 @@ unset MANPATH
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
-export PATH="$PATH:$HOME/Documents/scripts:$HOME/.gem/ruby/3.3.0/bin:/sbin:$HOME/go/bin:$HOME/.local/bin:$NPM_PACKAGES/bin:$HOME/bin:$HOME/.local/kitty.app/bin/"
+export PATH="$PATH:$HOME/Documents/scripts:$HOME/.gem/ruby/3.3.0/bin:/sbin:$HOME/go/bin:$HOME/.local/bin:$NPM_PACKAGES/bin:$HOME/bin:$HOME/.local/kitty.app/bin"
 #/opt/puppetlabs/puppet/bin
 
 export LC_CTYPE=fr_FR.UTF-8
@@ -54,10 +54,11 @@ alias cdc='cd ~/Documents/clients'
 alias cdco='cd ~/Documents/configs/beaker'
 alias cdd='cd ~/Documents/dev'
 
-alias cde='cd ~/Documents/clients/takeda'
+alias cde='cd ~/Documents/clients/takeda/github/pasx'
 alias cdg='cd ~/Documents/clients/takeda/github'
 alias cdo='cd ~/Documents/clients/takeda/github/openshift/gmsgq-mes-pasx-openshift'
 alias cds='cd ~/Documents/clients/takeda/github/pasx/GMSGQ-MES-PASX-INTEGRATION/snippets/'
+alias cdt='cd ~/Documents/clients/takeda'
 
 alias cdf='cd ~/Documents/think/gitlab/formations'
 alias cdj='cd ~/Documents/jeux/jeuxvideo'
@@ -66,7 +67,6 @@ alias cdm='cd ~/Documents/labs/puppet-modules'
 alias cdn='cd ~/Documents/blocnote'
 alias cdp='cd ~/Documents/labs/puppet'
 alias cdr='cd ~/Documents/labs/r10k'
-alias cdt='cd ~/Documents/think'
 alias cdti='cd ~/Documents/dev/lofic/tips'
 
 alias hc='rm -f ~/.bash_history; history -c'
